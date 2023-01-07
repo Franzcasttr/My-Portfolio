@@ -6,6 +6,9 @@ import Section1 from '../Components/Section1';
 import About from '../Components/About';
 import Skills from '../Components/Skills';
 import RecentWorks from '../Components/RecentWorks';
+import Contact from '../Components/Contact';
+import Footer from '../Components/Footer';
+
 export default function Home() {
   return (
     <>
@@ -28,6 +31,10 @@ export default function Home() {
           <About />
           <Skills />
           <RecentWorks />
+          <Contact />
+
+          <hr className='border border-[#454B54] mt-[104px] mb-12' />
+          <Footer />
         </div>
       </main>
     </>

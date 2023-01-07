@@ -1,17 +1,38 @@
 import React from 'react';
 import { BiDownload } from 'react-icons/bi';
 import CTASVG from '../assets/SVGS/CTA';
+import { motion } from 'framer-motion';
 
 const Section1 = () => {
   return (
-    <div className='block justify-between gap-10 mt-16 md:flex'>
+    <div className='block justify-between gap-10 mt-16 md:mt-0 lg:flex'>
       <div>
-        <h1 className='text-[6rem] text-center md:text-left md:text-[10rem] font-extrabold text-[#454B54]'>
+        <motion.h1
+          className='text-[6rem] md:text-[8rem] xl:text-[10rem] text-center md:text-left  font-extrabold text-[#454B54]'
+          initial={{ opacity: 0, x: -200 }}
+          animate={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}>
           HELLO
-        </h1>
-        <div className='text-6xl text-center flex flex-col gap-4 mb-4 font-semibold md:text-left'>
-          <p>I&apos;m</p>
-          <p className='text-[#68DCC7]'>Francis</p>
+        </motion.h1>
+        <div className='text-5xl xl:text-6xl text-center flex flex-col gap-4 mb-4 font-semibold md:text-left'>
+          <motion.p
+            initial={{ opacity: 0, x: 200 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.7, duration: 1 },
+            }}>
+            I&apos;m
+          </motion.p>
+          <motion.p
+            className='text-[#68DCC7]'
+            initial={{ opacity: 0, x: -100 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.9, duration: 1 },
+            }}>
+            Francis
+          </motion.p>
         </div>
         <p className='text-center md:text-left primary-clr'>
           looking for a web developer to fix or build your website? worry no
@@ -27,8 +48,8 @@ const Section1 = () => {
           </button>
         </div>
       </div>
-      <div className='flex justify-center mt-11 md:mt-0'>
-        <CTASVG className='w-[315px] h-[256px] md:w-[505px] md:h-[409px]' />
+      <div className='flex justify-center mt-11 '>
+        <CTASVG className='w-[315px] h-[256px] md:w-[405px] md:h-[309px] xl:w-[505px] xl:h-[409px]' />
       </div>
     </div>
   );

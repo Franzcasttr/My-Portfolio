@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 const FoodySVG = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={350}
+    width={340}
     height={423}
     viewBox='0 0 350 423'
     fill='none'

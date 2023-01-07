@@ -8,9 +8,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: #222831;
   color: #ababab;
+}
+
+.bginside {
+  box-shadow: inset -3px -2px 5px rgba(255, 255, 255, 0.25),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .dark-text {

@@ -28,12 +28,12 @@ const Navbar = () => {
           })}
         </div>
         <div>
-          <button className='primary-clr p-3 bg-[#454B54] rounded-full'>
+          {/* <button className='primary-clr p-3 bg-[#454B54] rounded-full'>
             <div className='flex gap-2 items-center'>
               <p>Download CV</p>
               <BiDownload className='text-xl' />
             </div>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
