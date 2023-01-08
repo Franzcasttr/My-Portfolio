@@ -32,14 +32,14 @@ const RecentWorks = () => {
           <div className='flex justify-center'>
             <FoodySVG className='md:w-[300px]' />
           </div>
-          <div className='flex justify-center gap-4  mt-4 md:mt-0'>
-            <button className=''>
+          <div className='flex justify-center gap-4 mt-4'>
+            <Link href='https://github.com/Franzcasttr/FoodyClient.git'>
               <BsGithub className='text-3xl text-[#ffffff]' />
-            </button>
+            </Link>
 
-            <button className=''>
+            <Link href='https://foody-17af1.web.app/'>
               <BiLinkExternal className='text-3xl text-[#ffffff]' />
-            </button>
+            </Link>
           </div>
 
           <div className='mt-4'>
@@ -59,17 +59,23 @@ const RecentWorks = () => {
           <div className='flex justify-center'>
             <FoodyadminSVG className='md:w-[300px]' />
           </div>
-          <div className='flex justify-center gap-4  mt-4 md:mt-0'>
-            <button className=''>
-              <BsGithub className='text-3xl text-[#ffffff]' />
-            </button>
 
-            <button className=''>
+          <div className='flex justify-center gap-4 mt-4'>
+            <Link href='https://github.com/Franzcasttr/Foody-Admin.git'>
+              <BsGithub className='text-3xl text-[#ffffff]' />
+            </Link>
+
+            <Link href='https://foodyadmin-11c83.web.app/'>
               <BiLinkExternal className='text-3xl text-[#ffffff]' />
-            </button>
+            </Link>
           </div>
 
           <div className='mt-4'>
+            <div className='text-center text-sm mb-4'>
+              <p>Test account:</p>
+              <p>username: testuser93485@gmail.com</p>
+              <p>password: secretpassword</p>
+            </div>
             <p className='text-2xl font-semibold text-center'>
               Foody admin page
             </p>
@@ -93,16 +99,16 @@ const RecentWorks = () => {
               priority
             />
           </div>
+
           <div className='flex justify-center gap-4 mt-4'>
-            <button className=''>
+            <Link href='https://github.com/Franzcasttr/dahilayan-client-public'>
               <BsGithub className='text-3xl text-[#ffffff]' />
-            </button>
+            </Link>
 
-            <button className=''>
+            <Link href='https://dahilayan-client-side.vercel.app/'>
               <BiLinkExternal className='text-3xl text-[#ffffff]' />
-            </button>
+            </Link>
           </div>
-
           <div className='mt-4'>
             <p className='text-2xl font-semibold text-center'>Dahilayan</p>
           </div>
@@ -120,18 +126,24 @@ const RecentWorks = () => {
           <div className='flex justify-center'>
             <DahilayanadminSVG className='md:w-[300px]' />
           </div>
-          <div className='flex justify-center gap-4 mt-4 md:mt-0 '>
-            <button className=''>
-              <BsGithub className='text-3xl text-[#ffffff]' />
-            </button>
 
-            <button className=''>
+          <div className='flex justify-center gap-4 mt-4'>
+            <Link href='https://github.com/Franzcasttr/dahilayan-admin-public'>
+              <BsGithub className='text-3xl text-[#ffffff]' />
+            </Link>
+
+            <Link href='https://hotel-admin-alpha.vercel.app/auth/signin'>
               <BiLinkExternal className='text-3xl text-[#ffffff]' />
-            </button>
+            </Link>
           </div>
           {/* technologies */}
 
           <div className='mt-4'>
+            <div className='text-center text-sm mb-4'>
+              <p>Test account:</p>
+              <p>username: testuser93485@gmail.com</p>
+              <p>password: secretpassword</p>
+            </div>
             <p className='text-2xl font-semibold text-center'>
               Dahilayan admin page
             </p>
