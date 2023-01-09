@@ -22,13 +22,12 @@ const RecentWorks = () => {
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 '>
         <motion.div
           className='relative md:w-fit'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, type: 'spring' },
+            y: 0,
           }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.7 }}>
           <div className='flex justify-center'>
             <FoodySVG className='md:w-[300px]' />
           </div>
@@ -49,13 +48,12 @@ const RecentWorks = () => {
 
         <motion.div
           className='relative md:w-fit'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, type: 'spring' },
+            y: 0,
           }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.7 }}>
           <div className='flex justify-center'>
             <FoodyadminSVG className='md:w-[300px]' />
           </div>
@@ -84,13 +82,12 @@ const RecentWorks = () => {
 
         <motion.div
           className=' md:w-fit'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, type: 'spring' },
+            y: 0,
           }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.7 }}>
           <div className='md:mt-8 flex justify-center'>
             <Image
               src={dadmi}
@@ -116,13 +113,12 @@ const RecentWorks = () => {
 
         <motion.div
           className='relative md:w-fit'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, type: 'spring' },
+            y: 0,
           }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.7 }}>
           <div className='flex justify-center'>
             <DahilayanadminSVG className='md:w-[300px]' />
           </div>
@@ -152,13 +148,12 @@ const RecentWorks = () => {
 
         <motion.div
           className=' md:w-fit'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, type: 'spring' },
+            y: 0,
           }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.7 }}>
           <div className='md:mt-8 flex justify-center'>
             <Image
               src={jbcfitness}
@@ -187,13 +182,12 @@ const RecentWorks = () => {
 
         <motion.div
           className=' md:w-fit'
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, type: 'spring' },
+            y: 0,
           }}
-          viewport={{ once: true, amount: 0.5 }}>
+          viewport={{ once: true, amount: 0.7 }}>
           <div className='md:mt-8 flex justify-center'>
             <Image
               src={ulsc}

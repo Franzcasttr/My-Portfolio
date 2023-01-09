@@ -1,6 +1,45 @@
-import React from 'react';
+import React, { MouseEvent, useState } from 'react';
+import axios from 'axios';
+import { TiWarning } from 'react-icons/ti';
+import { AiFillCheckCircle } from 'react-icons/ai';
 
 const Contact = () => {
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [error, setError] = useState<boolean>(false);
+  const [errorMsg, setErrorMsg] = useState<string>('');
+  const [success, setSuccess] = useState<boolean>(false);
+  const [successMsg, setSuccessMsg] = useState<string>('');
+
+  const handleSubmit = async (e: MouseEvent) => {
+    e.preventDefault();
+    if (name === '' || email === '' || message === '') {
+      setError(true);
+      setErrorMsg('Please fill all fields');
+    }
+
+    const payload = {
+      name,
+      email,
+      message,
+    };
+    try {
+      const res = await axios.post('/api/sendEmail', payload);
+      if (res.status === 200) {
+        setSuccess(true);
+        setSuccessMsg(res.data.msg);
+      } else if (res.status === 400) {
+        setError(true);
+        setErrorMsg(res.data.errormsg);
+      }
+      setName('');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div id='contact' className='mt-[174px]'>
       <div className='text-4xl md:text-5xl text-center flex flex-col gap-4 mb-8 font-semibold md:text-left'>
@@ -14,6 +53,23 @@ const Contact = () => {
             Contact Form
           </p>
           <div>
+            {error && (
+              <div className='p-2 border border-[#FF6883] rounded-full mb-8'>
+                <div className='flex justify-center space-x-2 items-center'>
+                  <TiWarning className='text-[#FF6883] text-2xl' />
+                  <p>{errorMsg}</p>
+                </div>
+              </div>
+            )}
+            {success && (
+              <div className='p-3 border border-[#14DAB6] rounded-xl mb-8'>
+                <div className='flex justify-center space-x-2 items-center'>
+                  <AiFillCheckCircle className='text-[#14DAB6] text-4xl' />
+                  <p className='text-center'>{successMsg}</p>
+                </div>
+              </div>
+            )}
+
             <form className='flex flex-col gap-3'>
               <label htmlFor='name' className='capitalize'>
                 Enter your name
@@ -22,6 +78,8 @@ const Contact = () => {
                 type='text'
                 name='name'
                 id='name'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
                 className='bginside outline-none bg-[#222831]  rounded-2xl pl-2 h-12'
               />
@@ -32,6 +90,8 @@ const Contact = () => {
                 type='email'
                 name='mail'
                 id='mail'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className='bginside outline-none bg-[#222831]  rounded-2xl pl-2 h-12'
               />
@@ -41,9 +101,13 @@ const Contact = () => {
               <textarea
                 name='message'
                 id='message'
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className='bginside outline-none bg-[#222831]  rounded-2xl pl-2 h-24'
               />
-              <button className='p-4 my-4 mx-auto rounded-xl bg-[#222831] drop-shadow-4xl cursor-pointer'>
+              <button
+                onClick={handleSubmit}
+                className='p-4 my-4 mx-auto rounded-xl bg-[#222831] drop-shadow-4xl cursor-pointer'>
                 Submit
               </button>
             </form>
